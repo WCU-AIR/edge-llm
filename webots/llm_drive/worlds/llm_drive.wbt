@@ -2,34 +2,75 @@
 
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/shapes/protos/TexturedBoxShape.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.28749843210868553 -0.015483335108474102 -0.9576559496337743 3.2446498805538453
-  position 1.052901324069441 -0.13891900382394823 -0.17156756237960794
+  orientation 0.31116901217086396 -0.5160988331978404 -0.798007418660025 5.090411449772926
+  position -1.0638369760535544 -1.5538027852297926 1.445402860746212
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
-Floor {
-  size 100 100
-}
 E-puck {
-  hidden position_0_0 205.3815730685684
-  hidden position_0_1 255.6491765186007
-  hidden linearVelocity_0 0.10273207272384273 0.0622652016994489 2.306800845219857e-08
-  hidden angularVelocity_0 -0.004437930588345712 0.007320022597281625 1.7472835056486733e-06
-  hidden rotation_1 0 1 0 4.319643238821633
-  hidden linearVelocity_1 0.1027689819173036 0.06228687538398926 -1.7589322810927075e-09
-  hidden angularVelocity_1 -3.1143693284464407 5.1384336152330725 -4.2631456347722436e-08
-  hidden rotation_2 0 1 0 4.321764231417252
-  hidden linearVelocity_2 0.10276835896187486 0.06228790450176355 -2.023701299112033e-09
-  hidden angularVelocity_2 -3.114369657884166 5.138433415594431 -2.448742413087171e-07
-  translation 1.3136028040547327 -0.2122525224123052 -6.395752602975785e-05
-  rotation -0.0003520415065579276 0.001259389934891794 0.9999991450015193 0.5448879585863111
+  hidden position_0_0 964.839784980109
+  hidden position_0_1 703.2419087358627
+  hidden rotation_1 0 1 0 4.407972757204625
+  hidden rotation_2 0 -0.9999999999999999 0 0.3932797323712821
+  rotation 0 0 1 1.5708
   controller "llm_controller"
+  camera_fieldOfView 0.52
+  camera_width 176
+  camera_height 144
+  turretSlot [
+    GPS {
+      resolution 0.001
+    }
+  ]
+}
+RectangleArena {
+  translation 0 0 -0.01
+  rotation 0 0 1 3.14159
+  floorSize 1.4 1.4
+  floorTileSize 0.4 0.4
+}
+Solid {
+  translation -0.6 0.2 0
+  children [
+    TexturedBoxShape {
+      size 0.2 0.2 0.2
+      textureUrl [
+        "https://upload.wikimedia.org/wikipedia/commons/1/10/Red_Color.jpg"
+      ]
+    }
+  ]
+  name "RedTarget"
+}
+Solid {
+  translation 0 -0.4 0
+  children [
+    TexturedBoxShape {
+      size 0.2 0.2 0.2
+      textureUrl [
+        "https://upload.wikimedia.org/wikipedia/commons/e/e4/Color-blue.JPG"
+      ]
+    }
+  ]
+  name "BlueSolid"
+}
+Solid {
+  translation 0 0.4 0
+  children [
+    TexturedBoxShape {
+      size 0.2 0.2 0.2
+      textureUrl [
+        "https://img.freepik.com/premium-photo/solid-green-background-digital-compositing_728418-18963.jpg?semt=ais_hybrid&w=740&q=80"
+      ]
+    }
+  ]
+  name "GreenSolid"
 }
