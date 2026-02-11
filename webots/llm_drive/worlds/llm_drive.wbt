@@ -9,19 +9,19 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.31116901217086396 -0.5160988331978404 -0.798007418660025 5.090411449772926
-  position -1.0638369760535544 -1.5538027852297926 1.445402860746212
+  orientation 0.4239166264943014 -0.3756840386223951 -0.8241093355290047 4.474353531853381
+  position 0.03263044915507141 -1.8274438942524716 2.653907437466657
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 E-puck {
-  hidden position_0_0 964.839784980109
-  hidden position_0_1 703.2419087358627
-  hidden rotation_1 0 1 0 4.407972757204625
-  hidden rotation_2 0 -0.9999999999999999 0 0.3932797323712821
-  rotation 0 0 1 1.5708
+  hidden position_0_0 1023.7211753377253
+  hidden position_0_1 762.1232990321901
+  hidden rotation_1 0 1 0 0.45751004302504245
+  hidden rotation_2 0 -1 0 4.343742507839786
+  rotation -0.040442533999219515 0.04044238803269476 0.9983630675730822 1.5724382165840427
   controller "llm_controller"
   camera_fieldOfView 0.52
   camera_width 176
@@ -39,7 +39,7 @@ RectangleArena {
   floorTileSize 0.4 0.4
 }
 Solid {
-  translation -0.6 0.2 0
+  translation 0 0.2 0
   children [
     TexturedBoxShape {
       size 0.2 0.2 0.2
@@ -63,7 +63,7 @@ Solid {
   name "BlueSolid"
 }
 Solid {
-  translation 0 0.4 0
+  translation 0 0.6 0
   children [
     TexturedBoxShape {
       size 0.2 0.2 0.2

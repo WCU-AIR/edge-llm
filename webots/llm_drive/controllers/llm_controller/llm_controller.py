@@ -33,11 +33,12 @@ robot_position = 0  # Current position on the line
 
 # World
 world_map = {
-    "green": 2,    # 2 tiles forward
+    "green": 3,    # 2 tiles forward
+    "red": 1,      # 1 tile forward
     "blue": -2     # 2 tiles backward
 }
 
-goal_name = "green" 
+goal_name = "red" 
 goal_position = world_map[goal_name]
 
 
